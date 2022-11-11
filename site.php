@@ -32,7 +32,24 @@
     echo $characterName;
     echo "<br>";
     echo str_replace("HeyJikey", "HeyMikey", $characterName);
+    echo "<br>";
+    //substring used for grabbing characters/words
+    echo substr($characterName, 0, 8);
+    echo "<br>";
+    
+
 
 ?>
+    <form action="site.php" method="get">
+        Name:<input type="text" name="name">
+        <br>
+        Age:<input type="number" name="age"> 
+        <input type=submit><br>
+    
+    </form>
+    Your name is <?php echo $_GET["name"] ?>
+    and <br>
+    Your age is <?php echo $_GET["age"] ?>
+
 </body>
 </html>
