@@ -50,6 +50,14 @@
     Your name is <?php echo $_GET["name"] ?>
     and <br>
     Your age is <?php echo $_GET["age"] ?>
-
+    <br><br>
+    
+    <form action="site.php" method="get">
+        Num1<input type="number" name="number1">
+        <br>
+        NUm2<input type="number" name="number2">
+        <input type=submit><br>
+    </form>
+    <?php echo $_GET["number1"] + $_GET["number2"]; ?>
 </body>
 </html>
