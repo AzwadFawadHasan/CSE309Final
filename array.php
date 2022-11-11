@@ -7,16 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="post.php" method="POST">
-        
-        PASSWORD: <input type="password" name="password"><br>
+    <?php 
+    $friends = array("Kevin", "karen", 500 , "joker");
+    echo $friends[3];
+    echo "<br>";
+    echo $friends[3]="azwad";
+    echo "<br>";
+    echo $friends[3];
+    echo "<br>";
+    echo $friends[4]="four";
+    echo "<br>";
+    echo count($friends);
+    echo "<br>";
+    echo $friends[10]="random";
+    echo "<br>";
+    echo count($friends);
 
-        <input type="submit">
-
-</form>
-<?php 
-$passwordVariable = $_POST["password"];
-echo "your password is $passwordVariable";
-?>
+    ?>
 </body>
 </html>
