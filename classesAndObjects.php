@@ -13,15 +13,18 @@
         var $title;
         var $author;
         var $pages;
+        function __construct($aTitle, $aAuthor, $aPages){
+            echo "NEW Book Created<br>";
+            $this->title = $aTitle;
+            $this->author = $aAuthor;
+            $this->pages =$aPages;
+
+        }
     }
     
-    $book1 = new Book;
-    $book1->title = "Harry Potter";
-    $book1->author="JK rowlikng";
-    $book1->pages =388;
-
-    echo $book1->title;
+    $book1 = new Book("Harry Potter","JK rowlikng",388);
     
+    echo $book1->title;
     
     ?>
 </body>
