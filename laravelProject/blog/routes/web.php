@@ -18,5 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function(){
-    return 'Hello World';
+    return response('<h1>Hello World</h1>', 200)
+    ->header('Content-Type', 'text/plain')
+    ->header('foo','Bar');//response helper takes in the content and also the status. by default status = 200 meaning //everything is running smooth
+
+    
+    //we can add Headers to this
+    // by using arrows ->
+});
+
+
+Route::get('/posts/{id}', function($id){
+    return response('Post '.$id);
+
 });
