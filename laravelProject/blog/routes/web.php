@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,14 @@ Route::get('/hello', function(){
 
 
 Route::get('/posts/{id}', function($id){
+    dd($id);//die dump helper used for debugging 
+    //ddd used for die dump debugging
     return response('Post '.$id);
+
+})->where('id', '[0-9]+');//adding a constraint to id
+// here we want to only accept numbers from 0-9
+
+
+Route::get('/search', function(Request $request){
 
 });
