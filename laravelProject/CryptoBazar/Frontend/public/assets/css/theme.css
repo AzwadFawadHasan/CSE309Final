@@ -2651,7 +2651,7 @@ progress {
 }
 
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: #282424;
+  background-color: #f33c3c;
 }
 
 .form-control::-webkit-file-upload-button {
@@ -2681,7 +2681,7 @@ progress {
 }
 
 .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #282424;
+  background-color: #f33c3c;
 }
 
 .form-control-plaintext {
@@ -2690,7 +2690,7 @@ progress {
   padding: 0.3125rem 0;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #4d5769;
+  color: #f33c3c;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2782,7 +2782,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #4d5769;
+  color: #f33c3c;
   background-color: #282424;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%234d5969' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
