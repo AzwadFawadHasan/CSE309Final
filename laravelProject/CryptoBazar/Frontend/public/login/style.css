@@ -9,13 +9,14 @@
 }
 body{
     height: 100vh;
-    background: linear-gradient(
+    background-color: #282424;
+    /*background: linear-gradient(
         135deg,
-        #9e1f63 , #392d91
-    );
+        #282424 , #302c2c
+    );*/
 }
 .container{
-    background-color: #ffffff;
+    background-color: #302c2c;
     width: 70%;
     min-width: 420px;
     padding: 35px 50px;
@@ -29,7 +30,7 @@ body{
 h1{
     font-size: 30px;
     text-align: center;
-    color: #1c093c;
+    color: #f33c3c;
 }
 p{
     position: relative;
@@ -53,7 +54,7 @@ form{
     margin-bottom: 20px;
 }
 label{
-    color: #1c093c;
+    color: orangered;
     font-size: 14px;
 }
 textarea,
@@ -62,7 +63,7 @@ input{
     font-weight: 400;
     padding: 8px 10px;
     border-radius: 5px;
-    border: 1.2px solid #c4cae0;
+    border: 1.2px solid #0f0e0e;
     margin-top: 5px;
 }
 textarea{
@@ -78,9 +79,9 @@ button{
     padding: 10px 20px;
     background: linear-gradient(
         130deg,
-        #9e1f63 , #392d91
+        #f33c3c , #fa1515
     );
-    color: #ffffff;
+    color: #0f0e0e;
     border-radius: 3px;
 }
 #LogIn{
@@ -89,9 +90,9 @@ button{
     padding-right:  20px;
     background: linear-gradient(
         130deg,
-        #9e1f63 , #392d91
+        #f33c3c , #fa1515
     );
-    color: #ffffff;
+    color: #0f0e0e;
     border-radius: 3px;
     position: relative;
 }
