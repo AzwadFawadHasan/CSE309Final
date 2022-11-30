@@ -6,7 +6,9 @@
 /*                                  Utilities                                 */
 /* -------------------------------------------------------------------------- */
 /*-----------------------------------------------
-|   Bootstrap Styles
+|   Bootstrap Styles nav bar color darkest          #282424
+                                    ligether black  #F8F8F8
+                                    orange          #f33c3c
 -----------------------------------------------*/
 /*!
  * Bootstrap v5.0.0-alpha1 (https://getbootstrap.com/)
@@ -203,7 +205,7 @@ small, .small {
 
 mark, .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: #302c2c;
 }
 
 sub,
@@ -274,7 +276,7 @@ a > code {
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 75%;
-  color: #fff;
+  color: #302c2c;
   background-color: #4F5665;
   border-radius: 0.2rem;
 }
@@ -601,8 +603,8 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #bec3d0;
+  background-color: #302c2c;
+  border: 1px solid #302c2c;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 1.5625rem 2.8125rem rgba(79, 86, 101, 0.075);
   box-shadow: 0 1.5625rem 2.8125rem rgba(79, 86, 101, 0.075);
