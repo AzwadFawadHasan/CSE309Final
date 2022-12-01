@@ -1,8 +1,38 @@
-<?php
+<?php 
+
+
 
 ?>
-<h1>Listings
+
+
+<h1>
     <?php 
-    echo "$headings";
+        echo $headings;
     ?>
+
 </h1>
+
+
+<?php 
+        foreach($listings as $value):
+
+?>
+
+<h2>
+    <?php
+        echo $value['title'];
+    ?>
+</h2>
+
+<p>
+    <?php
+        echo $value['description'];
+    ?>
+</p>
+
+
+
+<?php
+        endforeach;
+
+?>

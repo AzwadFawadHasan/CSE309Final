@@ -20,7 +20,19 @@ Route::get('/', function () {
     
     return view('listings',
     [
-        'headings'=>'This is our latest listings'
+        'headings'=>'This is our latest listings',
+        'listings'=>[
+            [
+                'id'=>1,
+                'title'=>'Listing One',
+                'description'=> 'lorem epsum'
+            ],
+            [
+                'id'=>2,
+                'title'=>'Listing Two',
+                'description'=> 'lorem epsum'
+            ]
+        ]
     ]
     );
 });
