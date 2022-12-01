@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,12 +31,21 @@ Route::get('/posts/{id}', function ($id) {
     
 
 });
-
+/*
 Route::get('/posts/{id}', function ($id) {
-    // dd($id);//die dump  
+    dd($id);//die dump  
     ddd($id);//die dump debugger
     return response('Post'.$id);
     
 
 })-> where('id','[0-9]+');//adding a constraint so all numbers are only accepted
+*/
+Route::get('/search', function (Request $request) {
+    //return dd($request);
+   
+    //return dd($request->name .' '. $request->city);
+    return $request->name .' '. $request->city;
+    
+
+});
 
