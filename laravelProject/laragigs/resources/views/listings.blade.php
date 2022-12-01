@@ -28,3 +28,9 @@
 
 @endforeach
 
+@php
+    
+$test=1;
+
+@endphp
+{{$test}}
