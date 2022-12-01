@@ -1,4 +1,6 @@
+
 <?php
+// PHP code goes here
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    return view('listings',
+    [
+        'headings'=>'This is our latest listings'
+    ]
+    );
 });
 
 Route::get('/hello', function () {
@@ -31,7 +38,7 @@ Route::get('/posts/{id}', function ($id) {
     
 
 });
-/*
+
 Route::get('/posts/{id}', function ($id) {
     dd($id);//die dump  
     ddd($id);//die dump debugger
@@ -39,7 +46,9 @@ Route::get('/posts/{id}', function ($id) {
     
 
 })-> where('id','[0-9]+');//adding a constraint so all numbers are only accepted
-*/
+
+
+
 Route::get('/search', function (Request $request) {
     //return dd($request);
    
@@ -48,4 +57,10 @@ Route::get('/search', function (Request $request) {
     
 
 });
+
+
+?>
+
+
+
 
