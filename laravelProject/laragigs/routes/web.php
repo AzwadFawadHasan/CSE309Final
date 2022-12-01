@@ -18,5 +18,22 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function () {
-    return 'welcome';
+    return response('<h1> welcome </h1>', 200)-> header('Content-Type', 'text/plain')
+    -> header('foo', 'bar')
+    ;//we can add headers to this response
+    //giving text/plain gives out plaintext
+
 });
+
+Route::get('/posts/{id}', function ($id) {
+    return response('Post'.$id);
+    
+
+});
+
+Route::get('/posts/{id}', function ($id) {
+    return response('Post'.$id);
+    
+
+})-> where('id','[0-9]+');//adding a constraint so all numbers are only accepted
+
