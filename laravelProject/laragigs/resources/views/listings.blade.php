@@ -5,6 +5,11 @@
     
 </h1>
 
+@if(count($listings)==0)
+
+<p>No listings were found</p>
+
+@endif
 
 
 @foreach($listings as $value)
