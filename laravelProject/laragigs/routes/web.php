@@ -32,6 +32,8 @@ Route::get('/posts/{id}', function ($id) {
 });
 
 Route::get('/posts/{id}', function ($id) {
+    // dd($id);//die dump  
+    ddd($id);//die dump debugger
     return response('Post'.$id);
     
 
