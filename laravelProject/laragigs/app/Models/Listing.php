@@ -16,6 +16,17 @@ class Listing{
             ]
             ];
     }
+
+    public static function find($id){
+        $listings = self::all();  //when u have a class and you want to call another method use SELF to call a static funtion/method
+        foreach($listings  as $listing){
+            if($listing['id'] == $id){
+                return $listing;
+            }
+        }
+
+
+    }
 }
 
 

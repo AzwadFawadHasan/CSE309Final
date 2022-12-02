@@ -16,13 +16,24 @@ use App\Models\Listing;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//all listings
 Route::get('/', function () {
     
     return view('listings',
     [
         'headings'=>'This is our latest listings',
         'listings'=> Listing::all()
+    ]
+    );
+});
+//single listings
+Route::get('/listings/{id}', function ($id) {
+    //returns view for a single listing
+    //and then we wanna pass in an array that has a listing value.
+    return view('listing',
+    [
+        
+        'listing'=> Listing::find($id)
     ]
     );
 });

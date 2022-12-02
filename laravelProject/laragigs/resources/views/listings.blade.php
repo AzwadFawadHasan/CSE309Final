@@ -12,19 +12,19 @@
 @endif
 
 
-@foreach($listings as $value)
+@foreach($listings as $listing)
 
 
 
 <h2>
     
-        {{$value['title']}}
+        <a href="/listings/{{$listing['id']}}"> {{$listing['title']}} </a>
     
 </h2>
 
 <p>
     
-        {{$value['description']}}
+        {{$listing['description']}}
     
 </p>
 
