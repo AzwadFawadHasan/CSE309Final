@@ -3,6 +3,8 @@ This repo contains PHP tutorial and a project made using PHP
 # To Setup localhost
 Open CMD
 Run command "php -S localhost:4000"
+# To see frondend only(instructions)
+Just open index.html using liveserver in VScode
 
 ## Project name: CryptoBazar
 #### Introduction: 
