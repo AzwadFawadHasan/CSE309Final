@@ -4,6 +4,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,18 +22,7 @@ Route::get('/', function () {
     return view('listings',
     [
         'headings'=>'This is our latest listings',
-        'listings'=>[
-            [
-                'id'=>1,
-                'title'=>'Listing One',
-                'description'=> 'lorem epsum'
-            ],
-            [
-                'id'=>2,
-                'title'=>'Listing Two',
-                'description'=> 'lorem epsum'
-            ]
-        ]
+        'listings'=> Listing::all()
     ]
     );
 });
