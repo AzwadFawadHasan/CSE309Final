@@ -5,7 +5,7 @@ class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
 >
 @unless(count($listings) == 0)
 
-@foreach($listings as $value)
+@foreach($listings as $listing)
 <div class="bg-gray-50 border border-gray-200 rounded p-6">
     <div class="flex">
         <img
@@ -15,7 +15,7 @@ class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
         />
         <div>
             <h3 class="text-2xl">
-                <a href="show.html">Senior Laravel Developer</a>
+                <a href="show.html">{{$listing->title}}</a>
             </h3>
             <div class="text-xl font-bold mb-4">Acme Corp</div>
             <ul class="flex">
@@ -41,8 +41,7 @@ class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
                 </li>
             </ul>
             <div class="text-lg mt-4">
-                <i class="fa-solid fa-location-dot"></i> Boston,
-                MA
+                <i class="fa-solid fa-location-dot"></i> {{$listing->location}}
             </div>
         </div>
     </div>
