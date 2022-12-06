@@ -1,8 +1,6 @@
 @extends('layout')
 
 
-
-
 @section('content')
 <h2>
     

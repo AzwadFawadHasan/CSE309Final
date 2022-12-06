@@ -9,7 +9,8 @@
 <body>
     <h1>LaraGigs</h1>
     {{-- View Output --}}
-    @yeild('content')
+
+    @yield('content')
 </body>
 </html>
 

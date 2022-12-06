@@ -23,3 +23,7 @@ The main objective of “CryptoBazar” is to create an online platform for buye
 •	Admin can ban/unban user track and delete suspicious trade deals that break rules.
 •	Admin can update the exchange rate regularly to keep the exchange rate calculator synchronized with market rate.
 
+##### Regarding Blade
+Blade has components and props
+
+
