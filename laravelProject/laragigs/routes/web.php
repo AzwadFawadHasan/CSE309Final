@@ -26,18 +26,44 @@ Route::get('/', function () {
     ]
     );
 });
+
+//single listings CONVRTING TO ROUTE MODEL BINDINGS
+//here instead of '/listing/{id}' we passed {listing}
+//and instead of passing $id into the function
+// we passed the Listing (model) and then a variable of $listing
+//and this $listing variable should match the {listing} variable
+
+Route::get('/listings/{listing}', function (Listing $listing) {
+    //returns view for a single listing
+    //and then we wanna pass in an array that has a listing value.
+    return view('listing',
+        [
+
+            'listing'=> $listing
+        ]
+        );
+    
+});
+
+/* CONVERTING SINGLE LISTING TO ROUTE MODEL BINDINGS
 //single listings
 Route::get('/listings/{id}', function ($id) {
     //returns view for a single listing
     //and then we wanna pass in an array that has a listing value.
-    return view('listing',
-    [
-        
-        'listing'=> Listing::find($id)
-    ]
-    );
-});
+    $listing = Listing::find($id);
+    if($listing){
+        return view('listing',
+        [
 
+            'listing'=> Listing::find($id)
+        ]
+        );
+    }else{
+        abort('404');
+    }
+    
+});
+*/
 Route::get('/hello', function () {
     return response('<h1> welcome </h1>', 200)-> header('Content-Type', 'text/plain')
     -> header('foo', 'bar')
