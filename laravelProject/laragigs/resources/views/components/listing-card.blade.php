@@ -1,3 +1,20 @@
+{{-- 
+    
+    
+    since we need to access $listing 
+    we need to use a prop
+    
+    
+    
+    
+    we define props up the html code in blade
+    below we are passing an array of props to our prop
+    --}}
+
+@props(['listing'])
+
+
+
 
 <div class="bg-gray-50 border border-gray-200 rounded p-6">
     <div class="flex">
