@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Listing extends Model
 {
     use HasFactory;
+
+    public function scopeFilter($query, array $filters){//using this 
+        //in our listing model  we will be able to filter, 
+
+        if($filters['tag'] ?? false){//if this is filters['tag'] is false then move on to inside this if statement
+            $query->where('tags','like', '%' . request('tag') . '%');//we are doing a sqllite query
+            //the % sign represesnt anything can be before or after the route
+            //then we will concatenate whatever the request tag is 
+            //we then again concate it with another percent sign
+
+
+        }
+
+    }
 }
