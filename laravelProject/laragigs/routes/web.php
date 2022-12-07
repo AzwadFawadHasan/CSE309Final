@@ -19,12 +19,7 @@ use App\Models\Listing;
 //all listings
 Route::get('/', function () {
     
-    return view('listings',
-    [
-        'headings'=>'This is our latest listings',
-        'listings'=> Listing::all()
-    ]
-    );
+   
 });
 
 //single listings CONVRTING TO ROUTE MODEL BINDINGS
@@ -36,12 +31,7 @@ Route::get('/', function () {
 Route::get('/listings/{listing}', function (Listing $listing) {
     //returns view for a single listing
     //and then we wanna pass in an array that has a listing value.
-    return view('listing',
-        [
-
-            'listing'=> $listing
-        ]
-        );
+    
     
 });
 
