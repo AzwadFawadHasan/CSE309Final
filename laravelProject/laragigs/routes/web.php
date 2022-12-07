@@ -2,9 +2,10 @@
 <?php
 // PHP code goes here
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\ListingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,23 +18,29 @@ use App\Models\Listing;
 |
 */
 //all listings
+/*
 Route::get('/', function () {
     
    
 });
-
+*/
 //single listings CONVRTING TO ROUTE MODEL BINDINGS
 //here instead of '/listing/{id}' we passed {listing}
 //and instead of passing $id into the function
 // we passed the Listing (model) and then a variable of $listing
 //and this $listing variable should match the {listing} variable
+Route::get('/', [ListingController::class, 'index']);
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+
+/*
 
 Route::get('/listings/{listing}', function (Listing $listing) {
     //returns view for a single listing
     //and then we wanna pass in an array that has a listing value.
     
     
-});
+});*/
 
 /* CONVERTING SINGLE LISTING TO ROUTE MODEL BINDINGS
 //single listings
