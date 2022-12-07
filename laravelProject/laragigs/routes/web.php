@@ -94,7 +94,14 @@ Route::get('/search', function (Request $request) {
 
 });
 
-
+//common resource routes:
+//index - show all listing
+//show- show single listing
+//create -show form to create a new listing
+//store - store new listing
+//edit- show form to edit listing
+//update - update listing
+//destroy - delete listing
 ?>
 
 
