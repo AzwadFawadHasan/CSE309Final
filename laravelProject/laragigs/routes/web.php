@@ -34,7 +34,7 @@ Route::get('/', function () {
 Route::get('/', [ListingController::class, 'index']);
 
 //show create form
-Route::get('/listings/create',[ListingController::class, 'index']);
+Route::get('/listings/create',[ListingController::class, 'create']);
 
 //show single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
