@@ -72,7 +72,9 @@ class ListingController extends Controller
             'email'=>['required', 'email'],//should be formatted like an email
             'tags'=> 'required',
             'description'=> 'required'
+            //if any of these fails, then the form will send an error message through the redirect
 
         ]);
+        return redirect('/');
     }
 }
