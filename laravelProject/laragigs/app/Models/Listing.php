@@ -20,6 +20,16 @@ class Listing extends Model
 
 
         }
+        if($filters['search'] ?? false){//if this is filters['tag'] is false then move on to inside this if statement
+            $query->where('title','like', '%' . request('search') . '%')
+            ->orwhere('description','like', '%' . request('search') . '%')
+            ->where('tags','like', '%' . request('search') . '%');//we are doing a sqllite query
+            //the % sign represesnt anything can be before or after the route
+            //then we will concatenate whatever the request tag is 
+            //we then again concate it with another percent sign
+
+
+        }
 
     }
 }
