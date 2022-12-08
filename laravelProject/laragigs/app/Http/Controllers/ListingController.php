@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class ListingController extends Controller
 {
@@ -76,6 +77,8 @@ class ListingController extends Controller
 
         ]);
         Listing::create($formFields);
-        return redirect('/');
+        //we can create a listing seperately or together with the redirect;
+        //Session::flash('message','Listing has been created');
+        return redirect('/')->with('message','Listing Created successfully');//we now need a view to show this message
     }
 }
