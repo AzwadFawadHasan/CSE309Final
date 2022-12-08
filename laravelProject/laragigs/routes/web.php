@@ -29,8 +29,13 @@ Route::get('/', function () {
 //and instead of passing $id into the function
 // we passed the Listing (model) and then a variable of $listing
 //and this $listing variable should match the {listing} variable
+
+//all listing 
 Route::get('/', [ListingController::class, 'index']);
+//single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+//show create form
+Route::get('/listings/create', [ListingController::class, 'create']);
 
 
 /*
