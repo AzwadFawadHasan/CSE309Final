@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ListingController extends Controller
 {
@@ -52,5 +53,26 @@ class ListingController extends Controller
     //show create form
     public function create(){
         return view('listings.create');
+    }
+
+    public function store(Request $request){
+        //this validate is gonna takein an array
+
+        $formFields = $request->validate([
+            'title'=>'required',
+            //the company name has to be unique hence
+            //there is more than one rule
+            //so we use an array to pass the rules
+            //inside unique
+            //we pass in the table that we are using which is listings
+            //and we pass in the field that we are using it for that is company
+            'company'=>['required', Rule::unique('listings', 'company')],
+            'location'=> 'required',
+            'website' => 'required',
+            'email'=>['required', 'email'],//should be formatted like an email
+            'tags'=> 'required',
+            'description'=> 'required'
+
+        ]);
     }
 }

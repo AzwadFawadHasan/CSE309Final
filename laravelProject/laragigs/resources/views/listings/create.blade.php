@@ -85,8 +85,8 @@
                                 placeholder="Example: Laravel, Backend, Postgres, etc"
                             />
                         </div>
-
-                        <div class="mb-6">
+                        {{-- 
+                            <div class="mb-6">
                             <label for="logo" class="inline-block text-lg mb-2">
                                 Company Logo
                             </label>
@@ -96,6 +96,9 @@
                                 name="logo"
                             />
                         </div>
+                            
+                            --}}
+                        
 
                         <div class="mb-6">
                             <label
