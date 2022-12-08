@@ -75,6 +75,7 @@ class ListingController extends Controller
             //if any of these fails, then the form will send an error message through the redirect
 
         ]);
+        Listing::create($formFields);
         return redirect('/');
     }
 }
