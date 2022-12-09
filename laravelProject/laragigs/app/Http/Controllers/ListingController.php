@@ -149,4 +149,12 @@ class ListingController extends Controller
         return back()->with('message','Listing  Updated  successfully');//we now need a view to show this message
     }
 
+    //delete listing
+    public function destroy(Listing $listing){
+
+        $listing->delete();
+        return redirect('/');
+
+    }
+
 }
