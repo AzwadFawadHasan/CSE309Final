@@ -76,6 +76,10 @@ class ListingController extends Controller
             //if any of these fails, then the form will send an error message through the redirect
 
         ]);
+        if($request->hasFile('logo')){
+            //setting it to the path and uploading to the database at the same time
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
         Listing::create($formFields);
         //we can create a listing seperately or together with the redirect;
         //Session::flash('message','Listing has been created');
