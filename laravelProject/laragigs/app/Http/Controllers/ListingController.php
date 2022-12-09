@@ -85,4 +85,68 @@ class ListingController extends Controller
         //Session::flash('message','Listing has been created');
         return redirect('/')->with('message','Listing Created successfully');//we now need a view to show this message
     }
+
+    //Show Edit Form
+    public function edit(Listing $listing){
+        return view('listings.edit', ['listing'=>$listing]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Update listings data
+   
+
+    public function update(Request $request, Listing $listing){
+        //this validate is gonna takein an array
+
+        $formFields = $request->validate([
+            'title'=>'required',
+            //the company name has to be unique hence
+            //there is more than one rule
+            //so we use an array to pass the rules
+            //inside unique
+            //we pass in the table that we are using which is listings
+            //and we pass in the field that we are using it for that is company
+            'company'=>['required'],
+            'location'=> 'required',
+            'website' => 'required',
+            'email'=>['required', 'email'],//should be formatted like an email
+            'tags'=> 'required',
+            'description'=> 'required'
+            //if any of these fails, then the form will send an error message through the redirect
+
+        ]);
+        if($request->hasFile('logo')){
+            //setting it to the path and uploading to the database at the same time
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        //instead of getting Listing:: and a static method for ->create we need the current listing 
+        $listing->update($formFields);
+        //we can create a listing seperately or together with the redirect;
+        //Session::flash('message','Listing has been created');
+        return back()->with('message','Listing  Updated  successfully');//we now need a view to show this message
+    }
+
 }

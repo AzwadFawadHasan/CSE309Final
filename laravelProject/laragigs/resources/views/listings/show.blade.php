@@ -52,5 +52,17 @@
                         </div>
                     </div>
                 </x-card>
+                {{-- here 
+                    mt means margin 
+                    p -2 means padding 2
+                    space-x means space around x is 6
+                     --}}
+                <x-card class="mt-4 p-2 flex space-x-6">
+                    <a href="/listings/{{$listing->id}}/edit">
+                        <i class="fa-solid fa-pencil"></i>Edit  
+                    
+                    </a>
+
+                </x-card>   
             </div>
 </x-layout>
