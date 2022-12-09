@@ -30,7 +30,7 @@ class ListingController extends Controller
         // we can do this using the scope filter in the models.Listing
         return view('listings.index',
         [
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(6)
             //'listings'=> Listing::all()//instead of all() we can do latest();
             //using latest sorts our cards/listings in latest order
             //all() gives listings/posts in random order
