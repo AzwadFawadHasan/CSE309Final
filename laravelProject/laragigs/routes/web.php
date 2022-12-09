@@ -62,6 +62,9 @@ Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 Route::get('/register', [UserController::class, 'create']);
 
+// we know it's a post request to /users so let's handle that in this below route;
+Route::post('/users', [UserController::class, 'store']);
+
 
 /*
 
