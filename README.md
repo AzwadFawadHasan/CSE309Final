@@ -25,5 +25,5 @@ The main objective of “CryptoBazar” is to create an online platform for buye
 
 ##### Regarding Blade
 Blade has components and props
-
+Blade is the simple, yet powerful templating engine that is included with Laravel. Unlike some PHP templating engines, Blade does not restrict you from using plain PHP code in your templates.
 
