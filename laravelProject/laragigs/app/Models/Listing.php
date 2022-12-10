@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Listing extends Model
 {
@@ -38,6 +39,7 @@ class Listing extends Model
 
     //Relationship to user
     public function user(){
+        //a listing belongs to only ONE user
         return $this->belongsTo(User::class, 'user_id');
     }
 }

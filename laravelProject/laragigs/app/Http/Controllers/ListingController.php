@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use auth;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -141,6 +142,8 @@ class ListingController extends Controller
             //setting it to the path and uploading to the database at the same time
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
         }
+
+        $formFields['user_id'] = auth()->id();
 
         //instead of getting Listing:: and a static method for ->create we need the current listing 
         $listing->update($formFields);
