@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LaraGigs</title>
+    <title>CryptoBazar</title>
 </head>
 <body>
     <!DOCTYPE html>
@@ -34,7 +34,7 @@
                 },
             };
         </script>
-        <title>LaraGigs | Find Laravel Jobs & Projects</title>
+        <title>CryptoBazar | One Stop shop for Web 3.0 products</title>
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4">
@@ -94,12 +94,12 @@
     <footer
     class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
 >
-    <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+    <p class="ml-2">CryptoBazar | One-Stop-Shop for anything related to Web 3.0 </p>
 
     <a
         href="/listings/create"
         class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
-        >Post Job</a
+        >Post a Product</a
     >
 </footer>
     <x-flash-message />

@@ -10,7 +10,7 @@ class Listing extends Model
 {
     use HasFactory;
     //in laravel by default we have some protections while adding data to db they have to be put into mass fillable properly
-    //protected $fillable = ['title', 'company', 'location', 'website','email', 'description','tags'];    
+    protected $fillable = ['user_id', 'title', 'company', 'location', 'website','email', 'description','tags'];    
 
     public function scopeFilter($query, array $filters){//using this 
         //in our listing model  we will be able to filter, 

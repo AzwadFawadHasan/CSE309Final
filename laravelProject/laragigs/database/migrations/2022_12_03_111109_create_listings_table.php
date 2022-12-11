@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');//means that if the uesrs are deleted for some reason
+            //means that if the uesrs are deleted for some reason
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             //his posts will also get deleted
             $table->string('title');
             $table->string('logo')->nullable();

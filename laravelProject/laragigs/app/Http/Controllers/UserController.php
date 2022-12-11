@@ -69,8 +69,9 @@ class UserController extends Controller
             
         ]);
         //we need to attempt to log an user in so there's a method to login
+        //if that is true, we need to generate a session ID
         if(auth()->attempt($formFields)){
-            //if that is true, we need to generate a session ID
+            
             $request->session()->regenerate();
             return redirect('/')->with('message','you are now logged in');
         }
