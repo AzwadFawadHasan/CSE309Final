@@ -67,7 +67,7 @@ Route::post('/users', [UserController::class, 'store']);
 
 //log out
 
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 //show login form 
 Route::get('/login',[UserController::class, 'login'])->name('login');

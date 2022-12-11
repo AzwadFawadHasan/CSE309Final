@@ -120,9 +120,10 @@ class ListingController extends Controller
 
     public function update(Request $request, Listing $listing){
         //this validate is gonna takein an array
-
+        
         $formFields = $request->validate([
             'title'=>'required',
+           
             //the company name has to be unique hence
             //there is more than one rule
             //so we use an array to pass the rules
@@ -143,8 +144,8 @@ class ListingController extends Controller
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
         }
 
+        
         $formFields['user_id'] = auth()->id();
-
         //instead of getting Listing:: and a static method for ->create we need the current listing 
         $listing->update($formFields);
         //we can create a listing seperately or together with the redirect;

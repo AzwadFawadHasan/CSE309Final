@@ -12,9 +12,11 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
+    { if(!Schema::hasTable('users')){
+        
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            //$table->foreignId('user_id')->constrained()->onDelete('cascade')->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -22,6 +24,8 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+    }
     }
 
     /**

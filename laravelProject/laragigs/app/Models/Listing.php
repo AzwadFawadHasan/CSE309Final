@@ -10,7 +10,7 @@ class Listing extends Model
 {
     use HasFactory;
     //in laravel by default we have some protections while adding data to db they have to be put into mass fillable properly
-    protected $fillable = ['user_id', 'title', 'company', 'location', 'website','email', 'description','tags'];    
+    protected $fillable = ['id', 'title', 'company', 'location', 'website','email', 'description','tags'];    
 
     public function scopeFilter($query, array $filters){//using this 
         //in our listing model  we will be able to filter, 
@@ -40,6 +40,6 @@ class Listing extends Model
     //Relationship to user
     public function user(){
         //a listing belongs to only ONE user
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');//a listing model belongs to a user with the id user_id// ONE TO ONE
     }
 }
