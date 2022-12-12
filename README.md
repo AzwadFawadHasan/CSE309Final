@@ -1,6 +1,7 @@
 # CSE309Final
 This repo contains PHP tutorial and a project made using basic html, css, js ,PHP,Laravel, Mysql, (a little bit of alpine js and cdjs aka moment.js for the flash messages), a few componets of tailwind css was used with laravel
 
+
 # To Setup localhost and run the project
 Open CMD
 
@@ -48,7 +49,11 @@ Blade is the simple, yet powerful templating engine that is included with Larave
 
 
 
+###### Credits
 
+https://www.youtube.com/watch?v=MYyJ4PuL4pY&t=11086s
+Traversy Media
+-This project was made by following this video as a reference.
 
 
 
