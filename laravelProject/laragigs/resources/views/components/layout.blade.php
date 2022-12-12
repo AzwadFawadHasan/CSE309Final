@@ -55,7 +55,7 @@
                 <li>
                     <a href="/listings/create" class="hover:text-laravel"
                         ><i class="fa-solid fa-gear"></i>
-                        Manage?create Listings</a
+                        Manage/create Listings</a
                     >
                 </li>
                 <li>
