@@ -38,16 +38,16 @@ Route::get('/', [ListingController::class, 'index']);
 Route::get('/listings/create',[ListingController::class, 'create'])->middleware('auth');
 
 //store listing data
-Route::post('/listings',[ListingController::class, 'store'])->middleware('auth');
+Route::post('/listings',[ListingController::class, 'store']);
 
 //show edit form
 //this is route model binding {listings}
-Route::get('/listings/{listing}/edit',[ListingController::class, 'edit'])->middleware('auth');
+Route::get('/listings/{listing}/edit',[ListingController::class, 'edit']);
 
 
 //update listing
 //edit submit to update
-Route::put('/listings/{listing}', [ListingController::class,'update'])->middleware('auth');
+Route::put('/listings/{listing}', [ListingController::class,'update']);
 
 
 //Delete listing
