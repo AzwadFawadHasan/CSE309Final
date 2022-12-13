@@ -10,7 +10,7 @@ Run command "php -S localhost:4000"
 Open project with vscode
 Open terminal
 if you are using windows,
-clone the repo into the htdocs folder of xaammp
+clone the repo into the htdocs folder of xaammp (C:\xampp\htdocs)
 then open the folder and right click to open VScode
 run php artisan serve command after starting apache and mysql server using xammpp
 
