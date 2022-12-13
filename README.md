@@ -24,18 +24,6 @@ The main objective of “CryptoBazar” is to create an online platform for buye
 •	Product seller.
 •	Product buyer.
 •	Admin.
-#### Features:
-•	Seller can create offer and sell their product for normal currency (example: dollar, taka etc.) or any other crypto currency.
-•	Buyer can view offers from list and buy their preferred product with normal currency or any other crypto currency.
-•	Users can message each other to discuss about their trades.
-•	The site will also include a currency exchange rate calculator up to date with time using which the suer can check current exchange rates.
-•	Admin can ban/unban user track and delete suspicious trade deals that break rules.
-•	Admin can update the exchange rate regularly to keep the exchange rate calculator synchronized with market rate.
-
-##### Regarding Blade
-Blade has components and props
-Blade is the simple, yet powerful templating engine that is included with Laravel. Unlike some PHP templating engines, Blade does not restrict you from using plain PHP code in your templates.
-
 ##### Photos and Videos
 
 
@@ -48,6 +36,19 @@ Blade is the simple, yet powerful templating engine that is included with Larave
 
 ![4](https://user-images.githubusercontent.com/106096161/206968099-3a5072b7-f677-4b91-9d2c-dc60dc505d17.PNG)
 ![5](https://user-images.githubusercontent.com/106096161/206968111-2a37f6e9-0cb3-4727-9232-9a912250df99.PNG)
+
+#### Features:
+•	Seller can create offer and sell their product for normal currency (example: dollar, taka etc.) or any other crypto currency.
+•	Buyer can view offers from list and buy their preferred product with normal currency or any other crypto currency.
+•	Users can message each other to discuss about their trades.
+•	The site will also include a currency exchange rate calculator up to date with time using which the suer can check current exchange rates.
+•	Admin can ban/unban user track and delete suspicious trade deals that break rules.
+•	Admin can update the exchange rate regularly to keep the exchange rate calculator synchronized with market rate.
+
+##### Regarding Blade
+Blade has components and props
+Blade is the simple, yet powerful templating engine that is included with Laravel. Unlike some PHP templating engines, Blade does not restrict you from using plain PHP code in your templates.
+
 
 
 
