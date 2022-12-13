@@ -12,6 +12,7 @@ Open terminal
 if you are using windows,
 clone the repo into the htdocs folder of xaammp (C:\xampp\htdocs)
 then open the folder and right click to open VScode
+Go to the top left section of VScode and click on Terminal->open new Terminal
 run php artisan serve command after starting apache and mysql server using xammpp
 
 
