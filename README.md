@@ -1,4 +1,4 @@
-# CSE309Final
+# CryptoBazar(CSE309Final)
 This repo contains PHP tutorial and a project made using basic html, css, js ,PHP,Laravel, Mysql, (a little bit of alpine js and cdjs aka moment.js for the flash messages), a few componets of tailwind css was used with laravel
 
 
